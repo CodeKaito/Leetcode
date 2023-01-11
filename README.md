@@ -1,5 +1,5 @@
 # Leetcode
-Leetcode solutions i made
+Leetcode solutions I made
 
 ### LeetCode Algorithm
 
