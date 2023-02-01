@@ -61,4 +61,89 @@ class Solution:
             m[v] = i
 ```
 
+### **Java**
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> m = new HashMap<>();
+        for (int i = 0; i < nums.length; ++i) {
+            int v = nums[i];
+            int x = target - v;
+            if (m.containsKey(x)) {
+                return new int[] {m.get(x), i};
+            }
+            m.put(v, i);
+        }
+        return null;
+    }
+}
+```
+
+### **C++**
+
+```cpp
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> m;
+        for (int i = 0; i < nums.size(); ++i) {
+            int v = nums[i];
+            int x = target - v;
+            if (m.count(x)) return {m[x], i};
+            m[v] = i;
+        }
+        return {};
+    }
+};
+```
+
+### **C#**
+
+```cs
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        var m = new Dictionary<int, int>();
+        for (var i = 0; i < nums.Length; ++i)
+        {
+            int j;
+            int v = nums[i];
+            int x = target - v;
+            if (m.TryGetValue(x, out j))
+            {
+                return new [] {j, i};
+            }
+            if (!m.ContainsKey(v))
+            {
+                m.Add(v, i);
+            }
+
+        }
+        return null;
+    }
+}
+```
+
+### **JavaScript**
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function (nums, target) {
+    const m = new Map();
+    for (let i = 0; i < nums.length; ++i) {
+        const v = nums[i];
+        const x = target - v;
+        if (m.has(x)) {
+            return [m.get(x), i];
+        }
+        m.set(v, i);
+    }
+    return [];
+};
+```
+
 <!-- tabs:end -->
