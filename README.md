@@ -1,5 +1,5 @@
 # Leetcode
-Leetcode solutions I made in python
+Leetcode solutions I made in python.
 
 ### LeetCode Algorithm
 
